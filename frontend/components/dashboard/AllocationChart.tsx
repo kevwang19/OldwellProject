@@ -1,9 +1,24 @@
 "use client";
 
-import "@/lib/chart-setup";
+import {
+  ArcElement,
+  Chart as ChartJS,
+  Legend,
+  Tooltip,
+} from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 
-import type { AllocationSlice } from "@/lib/api";
+ChartJS.register(
+  ArcElement,
+  Tooltip,
+  Legend,
+);
+
+type AllocationSlice = {
+  name: string;
+  value: number;
+  color: string;
+};
 
 export function AllocationChart({
   title,

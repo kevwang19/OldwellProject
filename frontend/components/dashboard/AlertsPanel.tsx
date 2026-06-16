@@ -1,4 +1,10 @@
-import type { Alert } from "@/lib/api";
+type Alert = {
+  id: string;
+  title: string;
+  description: string;
+  time: string;
+  type: "performance" | "warning" | "person" | "document";
+};
 
 function AlertIcon({ type }: { type: Alert["type"] }) {
   const className = "mt-0.5 h-4 w-4 shrink-0";

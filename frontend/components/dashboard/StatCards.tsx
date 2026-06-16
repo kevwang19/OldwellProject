@@ -1,4 +1,10 @@
-import type { SummaryStat } from "@/lib/api";
+type SummaryStat = {
+  label: string;
+  value: string;
+  change: string;
+  trend: "up" | "down";
+  icon: string;
+};
 
 function StatIcon({ icon }: { icon: string }) {
   const className = "h-5 w-5 text-gray-400";
