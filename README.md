@@ -26,7 +26,7 @@ Dashboard data: http://127.0.0.1:8000/api/dashboard
 
 **Terminal 2 — frontend**
 
-optional  .env.local.example .env.local, defaults to 127.0.0.1:8000
+optional  .env.local.example .env.local, NEXT_PUBLIC_API_URL defaults to 127.0.0.1:8000
 
 ```bash
 cd frontend
