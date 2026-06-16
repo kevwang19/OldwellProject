@@ -26,7 +26,7 @@ Dashboard data: http://127.0.0.1:8000/api/dashboard
 
 **Terminal 2 — frontend**
 
-## optional  .env.local.example .env.local, defaults to 127.0.0.1:8000
+optional  .env.local.example .env.local, defaults to 127.0.0.1:8000
 
 ```bash
 cd frontend
@@ -50,4 +50,4 @@ App: http://localhost:3000
 - Split `/api/dashboard` into smaller endpoints (summary, performance, alerts) if they are reused in other pages
 - Migrate hardcoded mock data into SQLite db for local testing or temporary projects, or create tables and seed tables with migrations in actual database in cloud like AWS/GCP or Supabase/Firebase
 - Deploy both parts to hosting environments, perhaps frontend Nextjs to vercel, backend python FastAPI to AWS Elasticbeanstalk or API Gateway / Lambda depending on what is appropriate for business use case
-- Evaluate whether this hsould be separate frontend + backend or just use a full stack framework like Nextjs in one repo, and if stay separate, should they be deployed to separate github repos for separation of concerns / releases, or stay in 1 monorepo
+- Evaluate whether this should be separate frontend + backend or just use a full stack framework like Nextjs in one repo, and if stay separate, should they be deployed to separate github repos for separation of concerns / releases, or stay in 1 monorepo
