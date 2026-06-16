@@ -83,37 +83,31 @@ export default function DashboardPage() {
     );
   }
 
-  if (!data) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-gray-50">
-        <p className="text-gray-500">Loading dashboard...</p>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
 
       <div className="mx-auto grid max-w-7xl gap-6 p-6 lg:grid-cols-[1fr_320px]">
         <div className="space-y-6">
-          <StatCards stats={data.summary} />
+          <StatCards stats={data?.summary} isLoading={!data} />
 
           <div className="grid gap-6 xl:grid-cols-2">
             <PerformanceChart
-              title={data.performance.title}
-              subtitle={data.performance.subtitle}
-              data={data.performance.data}
+              title={data?.performance.title || "Portfolio Performance"}
+              subtitle={data?.performance.subtitle || "vs Benchmark"}
+              data={data?.performance.data || []}
+              isLoading={!data}
             />
             <AllocationChart
-              title={data.allocation.title}
-              subtitle={data.allocation.subtitle}
-              data={data.allocation.data}
+              title={data?.allocation.title || "Asset Allocation"}
+              subtitle={data?.allocation.subtitle || "Current Holdings"}
+              data={data?.allocation.data || []}
+              isLoading={!data}
             />
           </div>
         </div>
 
-        <AlertsPanel alerts={data.alerts} />
+        <AlertsPanel alerts={data?.alerts || []} isLoading={!data} />
       </div>
     </div>
   );
