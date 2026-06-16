@@ -10,6 +10,32 @@ OldWell/
 └── backend/    # FastAPI + mock data
 ```
 
+Backend file structure is very simple... just 2 files main.py and mock_data.py
+
+Frontend file structure is just comprised of /app and /components. The folder /app has main navigation pages (/dashboard). The /components folder has subfolders (/nav for components related to overall navigation), and (/dashboard for components related to dashboard page for now).
+
+## Setup
+
+**Prerequisites:**
+- Python 3.10+ 
+- Node.js 18+
+
+**First time setup:**
+
+**Backend:**
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+**Frontend:**
+```bash
+cd frontend
+npm install
+```
+
 ## Run locally
 
 **Terminal 1 — backend**
