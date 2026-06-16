@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+
+# Python
+backend/.venv/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Node / Next.js (frontend/.gitignore covers most; these are explicit from root)
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Env
+.env
+.env.local
+.env*.local
