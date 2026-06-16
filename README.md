@@ -25,8 +25,14 @@ Frontend file structure is just comprised of /app and /components. The folder /a
 **Backend:**
 ```bash
 cd backend
-python -m venv .venv
+python3 -m venv .venv
+
+# On macOS/Linux:
 source .venv/bin/activate
+
+# On Windows:
+# .venv\Scripts\activate
+
 pip install -r requirements.txt
 ```
 
@@ -42,7 +48,12 @@ npm install
 
 ```bash
 cd backend
+# On macOS/Linux:
 source .venv/bin/activate
+
+# On Windows:
+# .venv\Scripts\activate
+
 fastapi dev
 ```
 
