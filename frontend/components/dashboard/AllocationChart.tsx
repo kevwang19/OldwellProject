@@ -21,13 +21,9 @@ type AllocationSlice = {
 };
 
 export function AllocationChart({
-  title,
-  subtitle,
   data,
   isLoading = false,
 }: {
-  title: string;
-  subtitle: string;
   data: AllocationSlice[];
   isLoading?: boolean;
 }) {
@@ -53,8 +49,8 @@ export function AllocationChart({
 
   return (
     <div className="rounded-xl border border-gray-200 bg-white p-5">
-      <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
-      <p className="text-sm text-gray-500">{subtitle}</p>
+      <h2 className="text-lg font-semibold text-gray-900">Asset Allocation</h2>
+      <p className="text-sm text-gray-500">Current Holdings</p>
 
       <div className="mt-4 grid gap-4 sm:grid-cols-[180px_1fr] sm:items-center">
         {isLoading ? (

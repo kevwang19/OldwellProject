@@ -38,16 +38,8 @@ type Alert = {
 
 type DashboardData = {
   summary: SummaryStat[];
-  performance: {
-    title: string;
-    subtitle: string;
-    data: PerformancePoint[];
-  };
-  allocation: {
-    title: string;
-    subtitle: string;
-    data: AllocationSlice[];
-  };
+  performance: PerformancePoint[];
+  allocation: AllocationSlice[];
   alerts: Alert[];
 };
 
@@ -93,15 +85,11 @@ export default function DashboardPage() {
 
           <div className="grid gap-6 xl:grid-cols-2">
             <PerformanceChart
-              title={data?.performance.title || "Portfolio Performance"}
-              subtitle={data?.performance.subtitle || "vs Benchmark"}
-              data={data?.performance.data || []}
+              data={data?.performance || []}
               isLoading={!data}
             />
             <AllocationChart
-              title={data?.allocation.title || "Asset Allocation"}
-              subtitle={data?.allocation.subtitle || "Current Holdings"}
-              data={data?.allocation.data || []}
+              data={data?.allocation || []}
               isLoading={!data}
             />
           </div>

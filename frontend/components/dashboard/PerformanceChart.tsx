@@ -27,13 +27,9 @@ type PerformancePoint = {
 };
 
 export function PerformanceChart({
-  title,
-  subtitle,
   data,
   isLoading = false,
 }: {
-  title: string;
-  subtitle: string;
   data: PerformancePoint[];
   isLoading?: boolean;
 }) {
@@ -94,8 +90,8 @@ export function PerformanceChart({
 
   return (
     <div className="rounded-xl border border-gray-200 bg-white p-5">
-      <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
-      <p className="text-sm text-gray-500">{subtitle}</p>
+      <h2 className="text-lg font-semibold text-gray-900">Portfolio Performance</h2>
+      <p className="text-sm text-gray-500">vs Benchmark</p>
       <div className="mt-4 h-64">
         {isLoading ? (
           <div className="h-full w-full bg-gray-100 rounded animate-pulse flex items-center justify-center">
