@@ -9,11 +9,9 @@ import { PerformanceChart } from "@/components/dashboard/PerformanceChart";
 import { StatCards } from "@/components/dashboard/StatCards";
 
 type SummaryStat = {
-  label: string;
   value: string;
   change: string;
   trend: "up" | "down";
-  icon: string;
 };
 
 type PerformancePoint = {

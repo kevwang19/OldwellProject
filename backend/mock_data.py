@@ -1,32 +1,24 @@
 DASHBOARD = {
     "summary": [
         {
-            "label": "Funds Monitored",
             "value": "142",
             "change": "8.2%",
             "trend": "up",
-            "icon": "activity",
         },
         {
-            "label": "Total AUM Tracked",
             "value": "$15.0B",
             "change": "12.5%",
             "trend": "up",
-            "icon": "dollar",
         },
         {
-            "label": "Avg. YTD Return",
             "value": "+12.5%",
             "change": "3.1%",
             "trend": "up",
-            "icon": "trending",
         },
         {
-            "label": "Active Alerts",
             "value": "24",
             "change": "15%",
             "trend": "down",
-            "icon": "alert",
         },
     ],
     "performance": [
