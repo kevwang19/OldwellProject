@@ -1,5 +1,5 @@
 import asyncio
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from mock_data import DASHBOARD
@@ -22,6 +22,9 @@ async def root():
 
 @app.get("/api/dashboard")
 async def get_dashboard():
-    # Simulate 1-second delay to see loading state
-    await asyncio.sleep(1)
-    return DASHBOARD
+    try:
+        # Simulate 1-second delay to see loading state
+        await asyncio.sleep(1)
+        return DASHBOARD
+    except Exception:
+        raise HTTPException(status_code=500, detail="Failed to load dashboard data")
